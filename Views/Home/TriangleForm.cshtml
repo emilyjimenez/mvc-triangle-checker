@@ -1,0 +1,34 @@
+@{
+  Layout = "_Layout";
+}
+
+<div class="container">
+<h1>Triangle Checker!</h2>
+  <p>Enter your triangle statistics, and we will classify it for you, free of charge!</p>
+    <div class="form-group">
+      <form action="/TriangleResult" id="triangle-data">
+        <div class=form-group>
+          <label for="side1">Length of side 1:</label>
+        </div>
+        <div class=form-group>
+          <input id="side1" name="side-one" type="number" required>
+        </div>
+
+        <div class=form-group>
+          <label for="side2">Length of side 2:</label>
+        </div>
+        <div class=form-group>
+          <input id="side2" name="side-two" type="number" required>
+        </div>
+
+        <div class=form-group>
+          <label for="side3">Length of side 3:</label>
+        </div>
+        <div class=form-group>
+          <input id="side3" name="side-three" type="number" required>
+        </div>
+        <div class=form-group>
+          <button type="submit" class="btn">Calculate!</button>
+        </div>
+      </form>
+</div>
