@@ -7,6 +7,31 @@
 
 <p class="lead">Your triangle is...<p>
 
-  @Model["ResultingTriangle"].GetSideOne();
+  <p>Side One = @Model["ResultingTriangle"].GetSideOne();</p>
+  <p>Side Two = @Model["ResultingTriangle"].GetSideTwo();</p>
+  <p>Side Three = @Model["ResultingTriangle"].GetSideThree();</p>
+
+  @if (@Model["ResultingTriangle"].CheckIsTriangle())
+{
+  <h4>You have a triangle!</h4>
+  <p>Let's check what type of triangle you have.</p>
+
+  @if (@Model["ResultingTriangle"].CheckIsEquilateral())
+  {
+    <h4>It is Equilateral!</h4>
+  }
+  @if (@Model["ResultingTriangle"].CheckIsIsosceles())
+  {
+    <h4>It is Isosceles!</h4>
+  }
+  else
+  {
+    <h4>It is Scalene!</h4>
+  }
+}
+else
+{
+  <h4>You don't have a triangle!</h4>
+}
 
 </div>
